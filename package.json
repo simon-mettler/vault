@@ -1,0 +1,28 @@
+{
+  "name": "vault",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon-mettler/vault.git"
+  },
+  "author": "Simon Mettler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simon-mettler/vault/issues"
+  },
+  "homepage": "https://github.com/simon-mettler/vault#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

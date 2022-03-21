@@ -1,0 +1,11 @@
+doctype html
+html
+	head
+		title #{title}
+	body
+		h1 #{title}
+
+		form(role='form' method='post' action='/posttest')
+			lable(for='Name') Name:
+			input#name.form-control(type='text' placeholder='name' name='name')
+			button(type='submit') Submit
