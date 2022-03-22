@@ -10,7 +10,12 @@ const dailylog = require('./routes/dailylog');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+// Middleware
 app.use(express.urlencoded({extended: false}));
+
+app.get('/', (req, res) => {
+	res.render('landing');
+})
 
 app.use('/dailylog', dailylog);
 

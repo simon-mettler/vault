@@ -22,7 +22,7 @@ const getDailyLog = (req, res) => {
 		}
 		console.log(res.rows[0])
 	})
-	res.render('index', {
+	res.render('dailylog', {
 		title: 'logs in console...'
 	})
 }
