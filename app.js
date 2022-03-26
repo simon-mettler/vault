@@ -13,7 +13,7 @@ app.set('view engine', 'pug');
 // Middleware
 app.use(express.urlencoded({extended: false}));
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
 	res.render('landing');
 })
 
