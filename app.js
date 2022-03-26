@@ -3,6 +3,10 @@ const app = express();
 const path = require('path');
 const port = 3000;
 
+const Sequelize = require('sequelize');
+
+const models = require('./models/index.js')
+
 const dailylog = require('./routes/dailylog');
 
 
@@ -13,7 +17,8 @@ app.set('view engine', 'pug');
 // Middleware
 app.use(express.urlencoded({extended: false}));
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
+	//models.log_type.create({name: 'Testlog Type', unit: 'kg', data_type: 'bool', is_daily: true, is_active: false })
 	res.render('landing');
 })
 
