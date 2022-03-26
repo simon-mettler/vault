@@ -1,6 +1,5 @@
-const db = require('../db');
-
 const addDailyLog = (req, res) => {
+	/*
 	const {date, mood, happy, stress, paranoia, depression, fear, libido, inlove, sex_count, sex_qual, masturbation, cuddle} = req.body;
 	db.query(
 		`INSERT INTO dailylogs
@@ -11,11 +10,13 @@ const addDailyLog = (req, res) => {
 		if (err) {throw err}
 	}
 	);
+	*/
 	res.send('ok')
 }
 
 
 const getDailyLog = (req, res) => {
+	/*
 	db.query('SELECT * FROM dailylogs', [], (err, res) => {
 		if (err) { 
 			throw err 
@@ -25,10 +26,12 @@ const getDailyLog = (req, res) => {
 	res.render('dailylog', {
 		title: 'logs in console...'
 	})
+	*/
+	res.send('ok')
 }
 
 
 module.exports = {
-	addDailyLog,
-	getDailyLog
+	getDailyLog,
+	addDailyLog	
 }

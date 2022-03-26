@@ -5,9 +5,8 @@ const port = 3000;
 
 const Sequelize = require('sequelize');
 
-const models = require('./models/index.js')
-
 const dailylog = require('./routes/dailylog');
+const settings = require('./routes/settings');
 
 
 // Set pug view engine.
@@ -18,10 +17,10 @@ app.set('view engine', 'pug');
 app.use(express.urlencoded({extended: false}));
 
 app.get('/', (req, res) => {
-	//models.log_type.create({name: 'Testlog Type', unit: 'kg', data_type: 'bool', is_daily: true, is_active: false })
 	res.render('landing');
 })
 
 app.use('/dailylog', dailylog);
+app.use('/settings', settings);
 
 app.listen(port, console.log(`Server listening on port ${port}`))
