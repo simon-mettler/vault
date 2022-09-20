@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser')
 const path = require('path');
 const port = 3000;
 
@@ -9,15 +10,16 @@ const dailylog = require('./routes/dailylog');
 const settings = require('./routes/settings');
 
 
-// Set pug view engine.
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-
 // Middleware
-app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.json())
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+)
 
 app.get('/', (req, res) => {
-	res.render('landing');
+	res.json({ info: 'Node.js, Express, and Postgres API' })
 })
 
 app.use('/dailylog', dailylog);
